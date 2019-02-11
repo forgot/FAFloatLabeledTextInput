@@ -1,30 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CbP-Fp-lgw">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Floating Label Demo-->
+        <scene sceneID="XWE-Vu-jDT">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="FAFloatLabeledTextInput_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m2C-4Q-vM0" customClass="ViewController" customModule="FAFloatLabeledTextInput_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="t9W-Z0-oD6"/>
+                        <viewControllerLayoutGuide type="bottom" id="sQL-2c-13p"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view key="view" contentMode="scaleToFill" id="iW4-3G-EzF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3oF-mY-JJN">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jcu-c2-ufE" customClass="FAFloatLabelTextField" customModule="FAFloatLabeledTextInput">
+                                        <rect key="frame" x="10" y="0.0" width="355" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WsU-YW-ZWH"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZK-4g-FxE" userLabel="Divider">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="HeC-H0-52l"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6d-Sc-bhU">
+                                        <rect key="frame" x="0.0" y="51" width="375" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-oQ-kVT" customClass="FAFloatLabelTextField" customModule="FAFloatLabeledTextInput">
+                                                <rect key="frame" x="9.9999999999999929" y="0.0" width="111.33333333333331" height="50"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tP4-iy-Ter" userLabel="Divider">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="1" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="uKS-R8-5aq"/>
+                                                </constraints>
+                                            </view>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cgW-dl-a8F" customClass="FAFloatLabelTextField" customModule="FAFloatLabeledTextInput">
+                                                <rect key="frame" x="142.33333333333337" y="0.0" width="222.66666666666663" height="50"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="tP4-iy-Ter" firstAttribute="top" secondItem="r6d-Sc-bhU" secondAttribute="top" id="2ZH-OF-acl"/>
+                                            <constraint firstItem="Fwp-oQ-kVT" firstAttribute="width" secondItem="cgW-dl-a8F" secondAttribute="width" multiplier="2:4" id="7ZZ-pc-VZz"/>
+                                            <constraint firstItem="cgW-dl-a8F" firstAttribute="leading" secondItem="tP4-iy-Ter" secondAttribute="trailing" constant="10" id="CQf-TS-5nn"/>
+                                            <constraint firstItem="Fwp-oQ-kVT" firstAttribute="trailing" secondItem="tP4-iy-Ter" secondAttribute="leading" constant="-10" id="Its-g0-iJY"/>
+                                            <constraint firstAttribute="bottom" secondItem="cgW-dl-a8F" secondAttribute="bottom" id="MBS-g6-ZUz"/>
+                                            <constraint firstItem="cgW-dl-a8F" firstAttribute="top" secondItem="r6d-Sc-bhU" secondAttribute="top" id="NNw-6W-9nA"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fwp-oQ-kVT" secondAttribute="bottom" id="Q3S-8q-oXY"/>
+                                            <constraint firstItem="Fwp-oQ-kVT" firstAttribute="top" secondItem="r6d-Sc-bhU" secondAttribute="top" id="QHh-Xj-RJI"/>
+                                            <constraint firstAttribute="trailing" secondItem="cgW-dl-a8F" secondAttribute="trailing" constant="10" id="nuF-iD-f7x"/>
+                                            <constraint firstAttribute="height" constant="50" id="qm7-57-7kU"/>
+                                            <constraint firstItem="Fwp-oQ-kVT" firstAttribute="leading" secondItem="r6d-Sc-bhU" secondAttribute="leading" constant="10" id="yPg-bN-6qy"/>
+                                            <constraint firstAttribute="bottom" secondItem="tP4-iy-Ter" secondAttribute="bottom" id="yeR-cQ-mFG"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLI-dr-JPB" userLabel="Divider">
+                                        <rect key="frame" x="0.0" y="101" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="F4T-oa-KXN"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rEe-kB-0Ok" customClass="FAFloatLabelTextView" customModule="FAFloatLabeledTextInput">
+                                        <rect key="frame" x="10" y="102" width="355" height="539"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rLI-dr-JPB" firstAttribute="width" secondItem="3oF-mY-JJN" secondAttribute="width" id="1a4-KU-bcZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="rEe-kB-0Ok" secondAttribute="trailing" constant="10" id="1qt-h9-TWO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jcu-c2-ufE" secondAttribute="trailing" constant="10" id="Mbr-pm-uUJ"/>
+                                    <constraint firstItem="rEe-kB-0Ok" firstAttribute="leading" secondItem="3oF-mY-JJN" secondAttribute="leading" constant="10" id="lyl-mO-sXT"/>
+                                    <constraint firstItem="Jcu-c2-ufE" firstAttribute="leading" secondItem="3oF-mY-JJN" secondAttribute="leading" constant="10" id="ofz-Nx-aYM"/>
+                                    <constraint firstItem="r6d-Sc-bhU" firstAttribute="width" secondItem="3oF-mY-JJN" secondAttribute="width" id="s1i-xO-utf"/>
+                                    <constraint firstItem="zZK-4g-FxE" firstAttribute="width" secondItem="3oF-mY-JJN" secondAttribute="width" id="vMx-9a-WGS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3oF-mY-JJN" secondAttribute="trailing" id="AuH-Ez-SIa"/>
+                            <constraint firstItem="sQL-2c-13p" firstAttribute="top" secondItem="3oF-mY-JJN" secondAttribute="bottom" id="B27-II-7EN"/>
+                            <constraint firstItem="3oF-mY-JJN" firstAttribute="top" secondItem="t9W-Z0-oD6" secondAttribute="bottom" id="Jye-9i-3mF"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3oF-mY-JJN" secondAttribute="leading" constant="16" id="rOW-J6-dxX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Floating Label Demo" id="C2i-gK-Xoo"/>
+                    <connections>
+                        <outlet property="descriptionField" destination="rEe-kB-0Ok" id="VJB-yc-fDE"/>
+                        <outlet property="locationField" destination="cgW-dl-a8F" id="H68-9g-DlI"/>
+                        <outlet property="priceField" destination="Fwp-oQ-kVT" id="brQ-Zk-AI8"/>
+                        <outlet property="titleField" destination="Jcu-c2-ufE" id="rHR-bS-3mO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFK-TS-Tqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1639.2" y="866.00985221674875"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qoq-7w-s49">
+            <objects>
+                <tabBarController id="CbP-Fp-lgw" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5qQ-lI-6Zu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HPL-kq-cy3" kind="relationship" relationship="viewControllers" id="kpP-jn-txt"/>
+                        <segue destination="so4-Sh-NkS" kind="relationship" relationship="viewControllers" id="b8u-Fd-Q6E"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBJ-BQ-s25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204" y="473"/>
+        </scene>
+        <!--Floating Label Demo-->
+        <scene sceneID="bYc-nz-PMP">
+            <objects>
+                <tableViewController id="1cx-kF-sCs" customClass="TableViewController" customModule="FAFloatLabeledTextInput_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ms1-ag-OJu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Text Field" id="Je1-a5-b5i" customClass="FAFloatLabeledTextFieldTableViewCell" customModule="FAFloatLabeledTextInput">
+                                <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Je1-a5-b5i" id="lsq-Oy-orj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Text View" id="4Le-w4-Zdz" customClass="FAFloatLabeledTextViewTableViewCell" customModule="FAFloatLabeledTextInput">
+                                <rect key="frame" x="0.0" y="99.333333333333343" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Le-w4-Zdz" id="vx0-L5-Ytk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1cx-kF-sCs" id="fO8-EG-5JE"/>
+                            <outlet property="delegate" destination="1cx-kF-sCs" id="AkC-hU-cbs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Floating Label Demo" id="qMO-WR-Aqu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UmA-d1-Dac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556" y="168"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="zXz-5O-Kw0">
+            <objects>
+                <navigationController id="so4-Sh-NkS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Shg-UF-3Ar"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZlO-8a-fqR">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1cx-kF-sCs" kind="relationship" relationship="rootViewController" id="QAo-19-oxH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbx-Uu-CyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="168"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="CWp-Vx-i1K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HPL-kq-cy3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="2FK-dG-6qR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TOU-6Q-Vzk">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="m2C-4Q-vM0" kind="relationship" relationship="rootViewController" id="Ovl-CS-rkJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5t-qW-zUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696.79999999999995" y="866.00985221674875"/>
         </scene>
     </scenes>
 </document>
