@@ -1,0 +1,22 @@
+{
+  "name": "FAFloatLabeledTextInput",
+  "version": "0.1.0",
+  "summary": "A short description of FAFloatLabeledTextInput.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/forgot/FAFloatLabeledTextInput",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "forgot": "jesse@apprhythmia.com"
+  },
+  "source": {
+    "git": "https://github.com/forgot/FAFloatLabeledTextInput.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "FAFloatLabeledTextInput/Classes/**/*"
+}
