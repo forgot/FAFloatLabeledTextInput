@@ -1,0 +1,6 @@
+framework module FAFloatLabeledTextInput {
+  umbrella header "FAFloatLabeledTextInput-umbrella.h"
+
+  export *
+  module * { export * }
+}
