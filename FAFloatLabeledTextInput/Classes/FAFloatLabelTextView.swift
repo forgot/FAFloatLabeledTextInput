@@ -150,6 +150,16 @@ public class FAFloatLabelTextView: UITextView {
 
 extension FAFloatLabelTextView {
     
+    /// Programmatically clears the text view, and forces it to layout it's subviews.
+    ///
+    /// Per Apple, the `UITextView.textDidChangeNotification` is only sent "in response to *user-initiated* changes to the text."
+    /// This method allows the text view to "reset" after a programatic change to the `text` property.
+    public func clear() {
+        text = ""
+        setNeedsLayout()
+        layoutIfNeeded()
+    }
+    
     /// Helper function called by all initializers to setup common state.
     private func commonInit() {
         
@@ -227,7 +237,6 @@ extension FAFloatLabelTextView {
         floatingLabel.frame.origin.x = (textAlignment == .center ? floatingLabelOriginX * 0.5 : floatingLabelOriginX) + floatingLabelXPadding
         placeholderLabel.frame.origin.x = textAlignment == .center ? placeholderLabelX * 0.5 : placeholderLabelX
     }
-    
     
     /// Called to determine the text color to use when the text view becomes active.
     ///
