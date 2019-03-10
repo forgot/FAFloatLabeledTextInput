@@ -11,8 +11,14 @@ A Swift 4.2 implementation of the UX pattern known as the "Float Label Pattern".
 
 This design was heavily inspired by @jverdi's [JVFloatLabeledTextField](https://github.com/jverdi/JVFloatLabeledTextField) and @aksswami's [FloatLabelFields](https://github.com/aksswami/FloatLabelFields).
 
-![Example 1](https://user-images.githubusercontent.com/2170669/54080457-b255ec00-42b5-11e9-85c7-2a89d5c8ff92.gif)
-![Example 2](https://user-images.githubusercontent.com/2170669/54080460-c26dcb80-42b5-11e9-89d2-340089101619.gif)
+<h3 align="center">Standard Example</h3>
+<p align="center">
+<img name="Example 1" src="https://user-images.githubusercontent.com/2170669/54080457-b255ec00-42b5-11e9-85c7-2a89d5c8ff92.gif" width="600" height="338">
+</p>
+<h3 align="center">UITableViewCell Example</h3>
+<p align="center">
+<img name="Example 2" src="https://user-images.githubusercontent.com/2170669/54080460-c26dcb80-42b5-11e9-89d2-340089101619.gif" width="535" height="338">
+</p>
 
 ## Usage
 
