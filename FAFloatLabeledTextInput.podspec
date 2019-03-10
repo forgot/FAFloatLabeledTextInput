@@ -8,9 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FAFloatLabeledTextInput'
-  s.version          = '1.0'
-  s.summary          = 'Floating Labels For UITextField And UITextView'
-  s.swift_version = '4.2'
+  s.version          = '1.0.1'
+  s.summary          = 'A Swift 4.2 implementation of the UX pattern known as the "Float Label Pattern".'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,20 +18,26 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Like it says on the box, FAFloatLabeledTextInput contains subclasses for UITextField and UITextView that allow for floating labels.
-
-Also included are some UITableViewCell subclasses that wrap the UITextField and UITextView subclasses, with the latter allowing for automatic height adjustment so it can grow as you add new lines.
+FAFloatLabeledTextInput includes subclasses for both UITextField and UITextView. Additionally, it provides a UITableViewCell subclass for each thats ready to work out of the box, and the FAFloatLabeledTextViewTableViewCell is configured to grow as needed to accommodate text.
+  
                        DESC
 
   s.homepage         = 'https://github.com/forgot/FAFloatLabeledTextInput'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://user-images.githubusercontent.com/2170669/54080457-b255ec00-42b5-11e9-85c7-2a89d5c8ff92.gif', 'https://user-images.githubusercontent.com/2170669/54080460-c26dcb80-42b5-11e9-89d2-340089101619.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'forgot' => 'jesse@apprhythmia.com' }
   s.source           = { :git => 'https://github.com/forgot/FAFloatLabeledTextInput.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/forgot'
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'FAFloatLabeledTextInput/Classes/**/*'
   
+  # s.resource_bundles = {
+  #   'FAFloatLabeledTextInput' => ['FAFloatLabeledTextInput/Assets/*.png']
+  # }
+
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
+  # s.dependency 'AFNetworking', '~> 2.3'
 end
