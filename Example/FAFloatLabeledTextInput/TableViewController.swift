@@ -11,8 +11,24 @@ import FAFloatLabeledTextInput
 
 class TableViewController: UITableViewController {
 
+    var fields: [TextInput] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        fields.forEach { field in
+            if field is FAFloatLabelTextField {
+                (field as! FAFloatLabelTextField).text = ""
+                (field as! FAFloatLabelTextField).resignFirstResponder()
+            } else {
+                (field as! FAFloatLabelTextView).clear()
+                (field as! FAFloatLabelTextView).resignFirstResponder()
+            }
+        }
+        tableView.reloadData()
+        super.viewDidDisappear(animated)
     }
 
     // MARK: - Table view data source
@@ -51,6 +67,7 @@ extension TableViewController {
         cell.textField.placeholder = placeholder
         cell.textField.keepBaseline = true
         cell.textField.animateWhenFirstResponder = true
+        fields.append(cell.textField)
         return cell
     }
     
@@ -58,7 +75,12 @@ extension TableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Text View", for: indexPath) as! FAFloatLabeledTextViewTableViewCell
         cell.textView.placeholder = placeholder
         cell.textView.animateWhenFirstResponder = true
+        fields.append(cell.textView)
         return cell
     }
 
 }
+
+protocol TextInput {}
+extension FAFloatLabelTextField: TextInput {}
+extension FAFloatLabelTextView: TextInput {}

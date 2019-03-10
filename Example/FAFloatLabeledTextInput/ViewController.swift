@@ -22,6 +22,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         commonInit()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        let fields: [TextInput] = [titleField, priceField, locationField, descriptionField]
+        fields.forEach { field in
+            if field is FAFloatLabelTextField {
+                (field as! FAFloatLabelTextField).text = ""
+                (field as! FAFloatLabelTextField).resignFirstResponder()
+            } else {
+                (field as! FAFloatLabelTextView).clear()
+                (field as! FAFloatLabelTextView).resignFirstResponder()
+            }
+        }
+        super.viewDidDisappear(animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
