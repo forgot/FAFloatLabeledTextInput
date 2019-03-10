@@ -22,11 +22,11 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/forgot/FAFloatLabeledTextInput'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://user-images.githubusercontent.com/2170669/54080457-b255ec00-42b5-11e9-85c7-2a89d5c8ff92.gif', 'https://user-images.githubusercontent.com/2170669/54080460-c26dcb80-42b5-11e9-89d2-340089101619.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'forgot' => 'jesse@apprhythmia.com' }
   s.source           = { :git => 'https://github.com/forgot/FAFloatLabeledTextInput.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/forgot'
 
   s.ios.deployment_target = '9.0'
 
