@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class FAFloatLabelTextView: UITextView {
+open class FAFloatLabelTextView: UITextView {
     
     // MARK: - Properties
     
@@ -101,7 +101,7 @@ public class FAFloatLabelTextView: UITextView {
     
     // MARK: - Initializers
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
@@ -115,7 +115,7 @@ public class FAFloatLabelTextView: UITextView {
     
     // MARK: Layout
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         adjustTextContainerInsetTop()
         

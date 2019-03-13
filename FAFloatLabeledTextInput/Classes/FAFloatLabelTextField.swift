@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - Class Declaration -
 
-public class FAFloatLabelTextField: UITextField {
+open class FAFloatLabelTextField: UITextField {
     
     // MARK: - Properties
     
@@ -125,7 +125,7 @@ public class FAFloatLabelTextField: UITextField {
     // MARK: Property Overrides
 
     /// The string that is displayed when there is no other text in the text field.
-    override public var placeholder: String? {
+    override open var placeholder: String? {
         didSet {
             if let placeholder = placeholder {
                 placeholderText = placeholder
@@ -134,14 +134,14 @@ public class FAFloatLabelTextField: UITextField {
     }
     
     /// The styled string that is displayed when there is no other text in the text field.
-    override public var attributedPlaceholder: NSAttributedString? {
+    override open var attributedPlaceholder: NSAttributedString? {
         didSet {
             attributedPlaceholderText = attributedPlaceholder
         }
     }
     
     /// The natural size for the receiving view, considering only properties of the view itself.
-    override public var intrinsicContentSize: CGSize {
+    override open var intrinsicContentSize: CGSize {
         var height: CGFloat = textRect(forBounds: superview!.bounds).height
         if let text = text, (animateWhenFirstResponder && isFirstResponder) || !text.isEmpty || keepBaseline {
             height += (floatingLabel.frame.height + floatingLabelYPadding)
@@ -151,7 +151,7 @@ public class FAFloatLabelTextField: UITextField {
     
     // MARK: - Initializers
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
@@ -165,7 +165,7 @@ public class FAFloatLabelTextField: UITextField {
     
     // MARK: Layout
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setTitlePositionForTextAlignment()
         
@@ -191,7 +191,7 @@ public class FAFloatLabelTextField: UITextField {
         }
     }
     
-    override public func textRect(forBounds bounds: CGRect) -> CGRect {
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
         var rect = super.textRect(forBounds: bounds)
         
         guard let text = text else {
@@ -206,7 +206,7 @@ public class FAFloatLabelTextField: UITextField {
         return rect.integral
     }
     
-    override public func editingRect(forBounds bounds: CGRect) -> CGRect {
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         var rect = super.editingRect(forBounds: bounds)
         
         guard let text = text else {
@@ -222,7 +222,7 @@ public class FAFloatLabelTextField: UITextField {
         return rect.integral
     }
     
-    override public func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
+    override open func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
         var rect = super.clearButtonRect(forBounds: bounds)
         
         guard let text = text else {

@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - Class Declaration -
 
-public class FAFloatLabeledTextFieldTableViewCell: UITableViewCell {
+open class FAFloatLabeledTextFieldTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
@@ -33,7 +33,7 @@ public class FAFloatLabeledTextFieldTableViewCell: UITableViewCell {
     
     // MARK: - Initializers
 
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         commonInit()
     }
@@ -43,7 +43,7 @@ public class FAFloatLabeledTextFieldTableViewCell: UITableViewCell {
         commonInit()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
