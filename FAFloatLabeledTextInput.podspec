@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FAFloatLabeledTextInput'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'Floating Labels For UITextField And UITextView'
 
 # This description is used to generate tags and improve search results.
