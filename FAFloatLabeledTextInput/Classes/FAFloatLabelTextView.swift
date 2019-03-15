@@ -65,7 +65,11 @@ open class FAFloatLabelTextView: UITextView {
     
     /// Text color to be applied to the placeholder.
     /// Defaults to `UIColor.lightGray.withAlphaComponent(0.65)`.
-    public var placeholderTextColor: UIColor = UIColor.lightGray.withAlphaComponent(0.65)
+    public var placeholderTextColor: UIColor = UIColor.lightGray.withAlphaComponent(0.65) {
+        didSet {
+            placeholderLabel.textColor = placeholderTextColor
+        }
+    }
 
     /// Duration of the animation when showing the floating label. Defaults to 0.3 seconds.
     public var floatingLabelShowAnimationDuration: TimeInterval = 0.3
